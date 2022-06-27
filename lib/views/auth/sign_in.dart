@@ -1,11 +1,10 @@
 import 'package:authentication/utils/color.dart';
 import 'package:authentication/utils/text.dart';
-import 'package:authentication/views/auth/sign_in.dart';
 import 'package:authentication/widgets/textfieldwidget.dart';
 import 'package:flutter/material.dart';
 
-class SignUp extends StatelessWidget {
-  const SignUp({Key? key}) : super(key: key);
+class SignIn extends StatelessWidget {
+  const SignIn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,7 @@ class SignUp extends StatelessWidget {
           children: [
             Center(
               child: AppText.heading(
-                "Sign Up for An Account",
+                "Log in to Your Account",
                 color: Colors.black,
                 centered: true,
               ),
@@ -28,34 +27,23 @@ class SignUp extends StatelessWidget {
               height: 10,
             ),
             AppText.captionMedium(
-              "Let's get you all set up so you can start creating your first onboarding experience",
+              "Log in to your account to read and enjoy information from all over the globe all at the comfort of your phoone",
               centered: true,
             ),
             const SizedBox(
               height: 10,
             ),
             const TextFieldWidget(
-              header: "First Name",
-              hintText: "Your First Name",
-            ),
+                header: "Email", hintText: "Enter Your Email Address"),
             const TextFieldWidget(
-              header: "Last Name",
-              hintText: "Your Last Name",
-            ),
-            const TextFieldWidget(
-              header: "Email",
-              hintText: "Enter Your Email Address",
-            ),
-            const TextFieldWidget(
-              header: "Password",
-              hintText: "Enter a strong password",
-            ),
+                header: "Password", hintText: "Enter Your Password"),
             const SizedBox(
-              height: 5,
+              height: 10,
             ),
-            Center(
-                child: AppText.captionMedium(
-                    "I accept dave's Terms and Conditions")),
+            AppText.captionMedium(
+              "Forgot Password",
+              color: Colors.blue,
+            ),
             const SizedBox(
               height: 10,
             ),
@@ -74,22 +62,6 @@ class SignUp extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              AppText.caption("Already a user?"),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SignIn()));
-                },
-                child: AppText.caption(
-                  "Sign in",
-                  color: kPrimaryColor,
-                ),
-              ),
-            ])
           ],
         ),
       ),
