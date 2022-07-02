@@ -1,4 +1,5 @@
 import 'package:authentication/views/auth/sign_up.dart';
+import 'package:authentication/views/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,10 +14,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-       
         primarySwatch: Colors.blue,
       ),
-      home: const SignUp(),
+      home: const OnBoardingView(),
     );
   }
 }

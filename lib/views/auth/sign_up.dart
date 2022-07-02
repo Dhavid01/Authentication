@@ -5,7 +5,8 @@ import 'package:authentication/widgets/textfieldwidget.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatelessWidget {
-  const SignUp({Key? key}) : super(key: key);
+  SignUp({Key? key, required this.email}) : super(key: key);
+  final String email;
 
   @override
   Widget build(BuildContext context) {
@@ -34,19 +35,15 @@ class SignUp extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            const TextFieldWidget(
+            TextFieldWidget(
               header: "First Name",
               hintText: "Your First Name",
             ),
-            const TextFieldWidget(
+            TextFieldWidget(
               header: "Last Name",
               hintText: "Your Last Name",
             ),
-            const TextFieldWidget(
-              header: "Email",
-              hintText: "Enter Your Email Address",
-            ),
-            const TextFieldWidget(
+            TextFieldWidget(
               header: "Password",
               hintText: "Enter a strong password",
             ),

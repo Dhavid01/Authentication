@@ -4,11 +4,17 @@ import 'package:flutter/material.dart';
 import '../utils/text.dart';
 
 class TextFieldWidget extends StatelessWidget {
-  const TextFieldWidget(
-      {Key? key, required this.header, required this.hintText})
+  TextFieldWidget(
+      {Key? key,
+      required this.header,
+      required this.hintText,
+       this.type,
+       this.controller})
       : super(key: key);
   final String header;
   final String hintText;
+  String?type;
+  TextEditingController ?controller;
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +26,7 @@ class TextFieldWidget extends StatelessWidget {
           color: Colors.black,
         ),
         TextField(
+          controller: controller,
           textInputAction: TextInputAction.search,
           autofocus: true,
           style: const TextStyle(color: Colors.black, fontSize: 18),
